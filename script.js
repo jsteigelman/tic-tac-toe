@@ -12,6 +12,7 @@ const handleClick = (e) => {
     // check for win
     // check for tie
     // change turns
+    nextTurn()
 }
 
 boardCells.forEach((cell) => {
@@ -20,4 +21,8 @@ boardCells.forEach((cell) => {
 
 const placeGamePiece = (cell, currentPlayer) => {
     cell.classList.add(currentPlayer)
+}
+
+const nextTurn = () => {
+    xTurn = !xTurn
 }
