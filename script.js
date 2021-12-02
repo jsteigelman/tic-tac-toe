@@ -3,7 +3,20 @@ const O_CLASS = 'o'
 
 const board = document.getElementById('board')
 const boardCells = document.querySelectorAll('.cell')
-let xTurn = true
+let xTurn
+
+startGame()
+
+const startGame = () => {
+    xTurn = true
+
+    boardCells.forEach((cell) => {
+        cell.addEventListener('click', handleClick, { once: true })
+    })
+
+    setHoverPiece()
+
+}
 
 const handleClick = (e) => {
     console.log("cell clicked!")
@@ -12,13 +25,10 @@ const handleClick = (e) => {
     placeGamePiece(currentCell, currentPlayer)
     // check for win
     // check for tie
-    setHoverPiece()
     nextTurn()
 }
 
-boardCells.forEach((cell) => {
-    cell.addEventListener('click', handleClick, { once: true })
-})
+
 
 const placeGamePiece = (cell, currentPlayer) => {
     cell.classList.add(currentPlayer)
