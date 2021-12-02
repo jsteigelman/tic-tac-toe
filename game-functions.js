@@ -32,6 +32,9 @@ const placeGamePiece = (cell, currentPlayer) => {
 
 const nextTurn = () => {
     xTurn = !xTurn
+
+    // add class for player whos turn it is
+    // add css for that class
 }
 
 const setHoverPiece = () => {

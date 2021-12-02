@@ -38,9 +38,29 @@ body {
 
 
 /* hover game piece over board */
-.cell:not(.x):not(.o):hover {
-    background-color: lightgrey;
+.board.x .cell:not(.x):hover::before,
+.board.x .cell:not(.x):hover::after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 80%;
 
+    background-repeat: no-repeat;
+    background-image: url("/images/orange.png");
+    background-size: var(--mark-size) var(--mark-size);
+    opacity: 0.5;
+}
+
+.cell:not(.o):hover::after  {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 80%;
+
+    background-repeat: no-repeat;
+    background-image: url("/images/white.png");
+    background-size: var(--mark-size) var(--mark-size);
+    opacity: 0.7;
 }
 
 /* display game pieces on board */
