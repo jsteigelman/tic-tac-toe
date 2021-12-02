@@ -36,6 +36,15 @@ body {
     cursor: not-allowed;
 }
 
+
+/* hover game piece over board */
+.cell:not(.x):not(.o):hover {
+    background-color: lightgrey;
+
+}
+
+/* display game pieces on board */
+
 .cell.x::before,
 .cell.x::after {
     content: '';
