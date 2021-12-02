@@ -38,8 +38,8 @@ body {
 
 
 /* hover game piece over board */
-.board.x .cell:not(.x):hover::before,
-.board.x .cell:not(.x):hover::after {
+.board.x .cell:not(.x):not(.o):hover::before,
+.board.x .cell:not(.x):not(.o):hover::after {
     content: '';
     position: absolute;
     width: 80%;
@@ -51,7 +51,8 @@ body {
     opacity: 0.5;
 }
 
-.cell:not(.o):hover::after  {
+.board.o .cell:not(.x):not(.o):hover::before,
+.board.o .cell:not(.x):not(.o):hover::after  {
     content: '';
     position: absolute;
     width: 80%;
