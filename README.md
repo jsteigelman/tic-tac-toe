@@ -13,4 +13,4 @@ This is a tic-tac-toe game that I built and designed as a simple exercise to "co
 * Users tie when no one wins the game
 
 ## Game Preview
-<img src="/.png" alt="tic-tac-toe game" width="840"/>
+<img src="/tictactoe_preview.png" alt="tic-tac-toe game" width="840"/>
