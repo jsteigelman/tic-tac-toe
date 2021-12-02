@@ -8,18 +8,20 @@ const startGame = () => {
     setHoverPiece()
 }
 
+// when player clicks on board cell
 const handleClick = (e) => {
-    console.log("cell clicked!")
     const currentCell = e.target
     const currentPlayer = xTurn ? X_CLASS : O_CLASS
     placeGamePiece(currentCell, currentPlayer)
-    if (checkForWin(currentPlayer)) {
-        console.log("Winner!")
-        gameover()
+
+    if (playerWins(currentPlayer)) {
+        gameover(false)
+    } else if (playersTie()) {
+        gameover(true)
+    } else {
+        nextTurn()
+        setHoverPiece()
     }
-    // check for win
-    // check for tie
-    nextTurn()
 }
 
 const placeGamePiece = (cell, currentPlayer) => {
@@ -40,7 +42,7 @@ const setHoverPiece = () => {
     }
 }
 
-const checkForWin = (currentPlayer) => {
+const playerWins = (currentPlayer) => {
     return POSSIBLE_WINS.some(combination => {
         return combination.every((cellLocation) => {
             return boardCells[cellLocation].classList.contains(currentPlayer)
@@ -48,12 +50,20 @@ const checkForWin = (currentPlayer) => {
     })
 }
 
+const playersTie = () => {
+    return [...boardCells].every((cell) => {
+        return cell.classList.contains(X_CLASS) || 
+        cell.classList.contains(O_CLASS)
+    })
+}
+
 const gameover = (tie) => {
     if (tie) {
-
+        winMessageElement.innerText = "Tie!"
     } else {
         const winner = xTurn ? "X" : "O"
         winMessageText.innerText = `${winner} won!`
         winMessageElement.classList.add('show')
     }
+    winMessageElement.classList.add('show')
 }
