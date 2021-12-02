@@ -7,10 +7,10 @@ This is a tic-tac-toe game that I built and designed as a simple coding exercise
 [https://tictactoe-steigelman.netlify.app/](https://tictactoe-steigelman.netlify.app/)
 
 ## Functionality
-* User can place a piece by clicking on a cell
-* User can see their piece while hovering over a cell
-* User wins the game when they place three of their pieces in a row
+* User can place game piece by clicking on a cell
+* User can hover game piece over a cell
+* User wins the game after placing three pieces in a row
 * Users tie when no one wins the game
 
 ## Game Preview
-<img src="/" alt="tic-tac-toe game" width="840"/>
+<img src="/gamepreview.png" alt="tic-tac-toe game" width="840"/>
