@@ -17,7 +17,6 @@ const handleClick = (e) => {
     placeGamePiece(currentCell, currentPlayer)
 
     if (playerWins(currentPlayer)) {
-        console.log("Player won!")
         gameover(false)
     } else if (playersTie()) {
         gameover(true)
