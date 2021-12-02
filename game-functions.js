@@ -15,6 +15,7 @@ const handleClick = (e) => {
     placeGamePiece(currentCell, currentPlayer)
     if (checkForWin(currentPlayer)) {
         console.log("Winner!")
+        gameover()
     }
     // check for win
     // check for tie
@@ -45,4 +46,14 @@ const checkForWin = (currentPlayer) => {
             return boardCells[cellLocation].classList.contains(currentPlayer)
         })
     })
+}
+
+const gameover = (tie) => {
+    if (tie) {
+
+    } else {
+        const winner = xTurn ? "X" : "O"
+        winMessageText.innerText = `${winner} won!`
+        winMessageElement.classList.add('show')
+    }
 }

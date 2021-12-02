@@ -11,6 +11,8 @@ const POSSIBLE_WINS = [
     [2, 4, 6]
 ]
 
+const winMessageText = document.getElementById('win-message-text')
+const winMessageElement = document.getElementById('win-message')
 const board = document.getElementById('board')
 const boardCells = document.querySelectorAll('.cell')
 let xTurn
