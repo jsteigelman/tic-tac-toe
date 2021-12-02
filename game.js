@@ -11,15 +11,17 @@ const POSSIBLE_WINS = [
     [2, 4, 6]
 ]
 
-const winMessageText = document.getElementById('win-message-text')
-const winMessageElement = document.getElementById('win-message')
+const gameoverText = document.getElementById('gameover-text')
+const gameoverElement = document.querySelector('.gameoverElement')
+
+const newGameButton = document.getElementById('new-game-button')
 const board = document.getElementById('board')
 const boardCells = document.querySelectorAll('.cell')
 let xTurn
 
 startGame()
 
-
+newGameButton.addEventListener('click', startGame)
 
 
 

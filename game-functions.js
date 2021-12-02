@@ -1,11 +1,13 @@
 const startGame = () => {
     xTurn = true
-
     boardCells.forEach((cell) => {
+        cell.classList.remove(X_CLASS)
+        cell.classList.remove(O_CLASS)
+        cell.removeEventListener('click', handleClick)
         cell.addEventListener('click', handleClick, { once: true })
     })
-
     setHoverPiece()
+    gameoverElement.classList.remove('show')
 }
 
 // when player clicks on board cell
@@ -15,6 +17,7 @@ const handleClick = (e) => {
     placeGamePiece(currentCell, currentPlayer)
 
     if (playerWins(currentPlayer)) {
+        console.log("Player won!")
         gameover(false)
     } else if (playersTie()) {
         gameover(true)
@@ -59,11 +62,10 @@ const playersTie = () => {
 
 const gameover = (tie) => {
     if (tie) {
-        winMessageElement.innerText = "Tie!"
+        gameoverElement.innerText = "Tie!"
     } else {
         const winner = xTurn ? "X" : "O"
-        winMessageText.innerText = `${winner} won!`
-        winMessageElement.classList.add('show')
+        gameoverText.innerText = `${winner} won!`
     }
-    winMessageElement.classList.add('show')
+    gameoverElement.classList.add('show')
 }
