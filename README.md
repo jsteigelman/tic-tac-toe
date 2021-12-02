@@ -1,7 +1,7 @@
 # Tic-Tac-Toe
 
 ## Description
-This is a tic-tac-toe game that I built and designed as a simple coding exercise. 
+This is a tic-tac-toe game that I built and designed as a simple exercise for "coding a program from scratch". For the game pieces, I used two images (the cube and sphere) from Figma's free components library.
 
 ## Live Site URL
 [https://tictactoe-steigelman.netlify.app/](https://tictactoe-steigelman.netlify.app/)
