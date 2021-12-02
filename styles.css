@@ -36,6 +36,16 @@ body {
     cursor: not-allowed;
 }
 
+h1 {
+    font-family: 'Lora', serif;
+    font-size: 1.28rem;
+    text-align: left;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    border-bottom: 2px solid black;
+    font-weight: 600;
+}
 
 /* hover game piece over board */
 .board.x .cell:not(.x):not(.o):hover::before,
