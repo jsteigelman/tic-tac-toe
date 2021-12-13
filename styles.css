@@ -71,7 +71,7 @@ h1 {
     background-repeat: no-repeat;
     background-image: url("/images/white.png");
     background-size: var(--mark-size) var(--mark-size);
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 /* display game pieces on board */
@@ -133,27 +133,53 @@ h1 {
     background-color: rgba(34, 35, 38, 0.8);
     justify-content: center;
     align-items: center;
-    color: white;
+    color: black;
     font-family: 'Lora', serif;
-    font-size: 5rem;
+    font-size: 2.4rem;
     flex-direction: column;
     text-align: center;
 }
 
+div.gameoverElement {
+    flex: 1 1 0px;
+}
+
+div#gameover-text {
+    padding: 20px 0 30px;
+}
+
+#gamover-popup {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: space-evenly;
+    max-height: 50%;
+    width: 30%;
+    border: 3px solid black;
+    padding: 64px;
+}
+
+#gamover-popup p {
+    color: black;
+    margin: 0;
+    font-style: italic;
+}
+
 .gameoverElement button {
     font-family: 'Lora', serif;
-    font-size: 3rem;
+    font-size: 2.4rem;
     border-radius: 64px;
-    background-color: white;
-    border: 1px solid black;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
     padding: .25em .5em;
     cursor: pointer;
 }
 
 .gameoverElement button:hover {
-    background-color: black;
-    color: white;
-    border-color: white;
+    background-color: white;
+    color: black;
+    border-color: black;
 }
 
 .gameoverElement.show {

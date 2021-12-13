@@ -12,6 +12,8 @@ const POSSIBLE_WINS = [
 ]
 
 const gameoverText = document.getElementById('gameover-text')
+const test = document.getElementById('test')
+
 const gameoverElement = document.querySelector('.gameoverElement')
 
 const newGameButton = document.getElementById('new-game-button')

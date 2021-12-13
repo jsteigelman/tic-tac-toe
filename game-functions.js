@@ -68,6 +68,7 @@ const gameover = (tie) => {
     } else {
         const winner = xTurn ? "X" : "O"
         gameoverText.innerText = `${winner} won!`
+
     }
     gameoverElement.classList.add('show')
 }
