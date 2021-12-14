@@ -63,12 +63,14 @@ const playersTie = () => {
 }
 
 const gameover = (tie) => {
+    gameoverImage.classList.remove('X')
+    gameoverImage.classList.remove('O')
     if (tie) {
         gameoverText.innerText = "Tie!"
     } else {
         const winner = xTurn ? "X" : "O"
-        gameoverText.innerText = `${winner} won!`
-
+        // gameoverText.innerText = `${winner} won!`
+        gameoverImage.classList.add(winner)
     }
     gameoverElement.classList.add('show')
 }
